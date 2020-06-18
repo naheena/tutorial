@@ -1,0 +1,28 @@
+$popupSize: 500px;
+$background_color: #000;
+
+@mixin flex() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  @include flex();
+  background-color: rgba($background_color, 0.5);
+
+  .contents {
+    @include flex();
+    width: $popupSize;
+    height: $popupSize;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 1px 5px 7px rgba(0, 0, 0, 0.15);
+    color: black;
+  }
+}
